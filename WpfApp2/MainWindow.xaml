@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="524.742" Width="1116.09">
     <Grid>
-        
+        <Canvas x:Name="Tlo_appki" HorizontalAlignment="Left" Height="494" Margin="0,1,-5,0" VerticalAlignment="Top" Width="1113" Background="#FF0E0C0C">
+            <Image Height="74" Canvas.Left="194" Canvas.Top="30" Width="369">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="Naglowek" Height="146" Canvas.Left="40" Source="images.png" Stretch="Fill" Width="335"/>
+            <Label x:Name="Nazwa_label" Content="Nazwa" Height="47" Canvas.Left="40" Canvas.Top="146" Width="183" FontWeight="Bold" FontSize="24" Foreground="White"/>
+            <Label x:Name="Typ_label" Content="Typ 1" Height="47" Canvas.Left="40" Canvas.Top="193" Width="86" FontWeight="Bold" FontSize="24" Foreground="White"/>
+            <Label x:Name="Typ_label_Copy" Content="Typ 2" Height="47" Canvas.Left="40" Canvas.Top="240" Width="86" FontWeight="Bold" FontSize="24" Foreground="White"/>
+            <Label x:Name="Typ_label_Copy1" Content="Opis" Height="49" Canvas.Left="40" Canvas.Top="292" Width="86" FontWeight="Bold" FontSize="24" Foreground="White"/>
+            <GroupBox Header="Wprowadź dane" Height="474" Canvas.Left="10" Canvas.Top="10" Width="424" Foreground="White" FontSize="14"/>
+            <TextBox Height="42" Canvas.Left="161" TextWrapping="Wrap" Canvas.Top="151" Width="198" RenderTransformOrigin="0.496,0.484"/>
+            <TextBox Height="42" Canvas.Left="161" TextWrapping="Wrap" Canvas.Top="198" Width="198"/>
+            <TextBox Height="42" Canvas.Left="161" TextWrapping="Wrap" Canvas.Top="245" Width="198"/>
+            <TextBox Height="42" Canvas.Left="161" TextWrapping="Wrap" Canvas.Top="292" Width="198"/>
+            <GroupBox Header="Baza danych" Height="473" Canvas.Left="454" Canvas.Top="11" Width="649" Foreground="White" FontSize="14">
+                <DataGrid x:Name="DataGridXAML" HorizontalAlignment="Left" Height="323" Margin="55,38,0,0" VerticalAlignment="Top" Width="506" SelectionChanged="DataGrid_SelectionChanged_1">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Width="50"/>
+                        <DataGridTextColumn Header="Nazwa" Width="100"/>
+                        <DataGridTextColumn Header="Typ 1" Width="100"/>
+                        <DataGridTextColumn Header="Typ 2" Width="100"/>
+                        <DataGridTextColumn Header="Opis" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </GroupBox>
+        </Canvas>
+
     </Grid>
 </Window>
